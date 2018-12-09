@@ -1,8 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Redux saga example
+# Redux-Saga, Jest example
 
-reference: https://medium.com/@lavitr01051977/make-your-first-call-to-api-using-redux-saga-15aa995df5b6
+reference for redux-saga: https://medium.com/@lavitr01051977/make-your-first-call-to-api-using-redux-saga-15aa995df5b6
+
+reference for jest: https://medium.com/@lavitr01051977/jest-test-example-8a434db44e33
 
 ## Available Scripts
 

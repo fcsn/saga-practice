@@ -11,6 +11,10 @@ function* fetchNews() {
     yield put({ type: "NEWS_RECEIVED", json: json.articles });
 }
 function* actionWatcher() {
+    // takeLatest는 여러 개의 사가 태스크들이 동시에 실행되게 하지 않습니다.
+    // 새로운 액션이 dispatch되자 마자, 그것은 자신을 제외한 이전의 모든 포크된 태스크를 취소합니다 (이미 작동 중이더라도).
+    // takeLatest는 가장 나중의 응답만 받고 싶은 AJAX 요청을 다룰 때에 유용합니다.
+    // https://mskims.github.io/redux-saga-in-korean/advanced/Concurrency.html
     yield takeLatest('GET_NEWS', fetchNews)
 }
 export default function* rootSaga() {
